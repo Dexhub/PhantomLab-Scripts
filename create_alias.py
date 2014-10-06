@@ -22,19 +22,5 @@ def main():
         print template
         f.write(template)
 
-
-def get_inet_ips():
-  try:
-    import netinfo
-  except ImportError:
-    return None
-  else:
-    inetIPs = []
-    for interface in netinfo.list_active_devs():
-      if not interface.startswith('lo'):
-        ip = netinfo.get_ip(interface)
-        inetIPs.append(ip)
-    return inetIPs
-
 if __name__ == '__main__':
   main()
