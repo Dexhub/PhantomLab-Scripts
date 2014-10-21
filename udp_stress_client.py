@@ -24,7 +24,7 @@ import time
 
 # REMEMBER TO SPECIFY THE PROPER DETINATION HOST HERE...
 # 'host' should be the address that the server half of this is running on
-host = "localhost"
+host = "192.168.1.30"
 
 # if you change the port, change it on the server side as well
 port = 8105
@@ -76,7 +76,7 @@ while (1):
                         # a pause via time.sleep()
                         # not sure that this is needed.  Put it here to play with maybe not-overloading the
                         # windows tcp/ip stack, but not sure if it actually has any noticable effect.
-                        time.sleep(0.0001)
+                  #      time.sleep(0.0001)
                 print "Done."
 
             except:

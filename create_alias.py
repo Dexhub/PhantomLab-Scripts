@@ -18,7 +18,7 @@ def main():
     config_file = open(os.path.expanduser(CONFIG_FILE),'r')
     for line in config_file:
         sp = line.split()
-        template = "alias "+sp[0]+ "='ssh -v -X "+sp[1]+".emulab.net'\n"
+        template = "alias "+sp[1]+ "='ssh -v -X "+sp[0]+".emulab.net'\n"
         print template
         f.write(template)
 

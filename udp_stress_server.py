@@ -25,7 +25,7 @@ host = "0.0.0.0"
 
 #if you change the port, change it in the client program as well
 port = 8105
-buffer = 102400
+buffer = 102400000
 
 # Create socket and bind to address
 UDPSock = socket(AF_INET,SOCK_DGRAM)
@@ -64,7 +64,8 @@ while 1:
 		totalrcvs += 1
 
 		rate = totalbytes/(donestamp - timestamp) * 8 / 1000
-		print "\nRcvd: %s bytes, %s total in %s s at %s kbps" % (data, totalbytes, donestamp - timestamp, rate)
+                print "\nRcvd: %s bytes, %s total in %s s at %s kbps" % (data, totalbytes, donestamp - timestamp, rate)
+
 
 		if data == 1:
                     # this is the reset, send one byte to trigger
